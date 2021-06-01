@@ -1,6 +1,6 @@
 <h1 align="center"> WAAAZZUUUUUUUPPPP :smile: </h1>
 
-<h3 align="center"> <img src="https://github.com/zesy/zesy/blob/main/_flags.ico/brazil-flag-36.png"> Este é meu repositório para o BootCamp do IGTI <img src="https://github.com/zesy/zesy/blob/main/_flags.ico/brazil-flag-36"></h3>
+<h3 align="center"> <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/brazil-flag-32.png"> Este é meu repositório para o BootCamp do IGTI <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/brazil-flag-32.png"></h3>
 
 ## Primeiro Projeto:
 #### Covid19 - DashBoard
@@ -20,7 +20,7 @@
 
 ___
 
-<h3 align="center"><img src="https://github.com/zesy/zesy/blob/main/_flags.ico/united-kingdom-36"> This is my repository for the BooCamp from IGTI <img src="https://github.com/zesy/zesy/blob/main/_flags.ico/united-states-of-america-36"></h3>
+<h3 align="center"><img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-kingdom-32.png"> This is my repository for the BooCamp from IGTI <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-states-of-america-32.png"></h3>
 
 ## First Project:
 #### Covid19 - DashBoard
