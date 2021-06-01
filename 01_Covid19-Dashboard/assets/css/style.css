@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.75em;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px brown;
+}
+
+h5 {
+  text-align: center;
+  margin: 5px 0 0 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+h6 {
+  text-align: center;
+  margin: 0px 0 0 0;
+  font-size: 0.75em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open sans", sans-serif;
+  font-size: 1.3em;
+  color: black;
+  overflow: auto;
+  text-align: center;
+  height: 100%;
+  background-image: url("../img/fundo.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.item {
+  max-width: 400px;
+  min-width: 200px;
+  margin: 20px auto;
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px gray;
+}
+
+.container {
+  display: flex;
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+button {
+  border: 1px solid gray;
+  background-color: white;
+  box-shadow: 1px gray;
+}
+button:hover{
+  background-color: lightsteelblue;
+}
+button:active{
+  background-color: steelblue;
+}
+
+#combo, #sdata, #lang {
+  font-family: "Open sans", sans-serif;
+  font-size: 0.9em;
+  padding: 5px 5px;
+  margin: 10px 0;
+}
+
+label{
+  border-color: gray;
+  border-style: solid;
+  border-width: 1px 0px 1px 1px;
+  padding: 5px 10px;
+  background-color: white;
+}
+
+button{
+  font-family: "Open sans", sans-serif;
+  font-size: 0.9em;
+  padding: 5px 10px;
+  margin: 5px 10px;
+}
+
+.search{
+  width: 100%;
+  margin: auto;
+}
+
+#span-error{
+  color: red;
+}
+
+.slc-language{
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 25px;
+}

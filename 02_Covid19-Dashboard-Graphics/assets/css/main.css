@@ -1,0 +1,55 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    min-height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+.box{
+    min-height: 470px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.fix-nav-height{
+    width: 100%;
+    height: 60px;;
+}
+
+.kpi-content{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 90%;
+    min-height: 80px;
+}
+
+#summary{
+    background-color: gainsboro;
+}
+#top10{
+    background-color: silver;
+}
+#country{
+    background-color: darkgray;
+}
+
+#slcTop10{
+    font-size: 1.3em;
+    padding: 0 10px;
+    margin: 0;
+}
+
+.scrollTo{
+    transition: 0.9s;;
+}
+.scrollTo:hover{
+    background-color: gray;
+}

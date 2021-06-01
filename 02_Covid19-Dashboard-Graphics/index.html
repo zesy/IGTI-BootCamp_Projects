@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Números da Covid</title>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- MY CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-dark bg-dark fixed-top m-0 p-0">
+        <div class="m-auto">
+          <a class="navbar-brand scrollTo m-0 px-4 py-2" href="#summary">Global</a>
+          <a class="navbar-brand scrollTo m-0 px-4 py-2" href="#top10">Top 10</a>
+          <a class="navbar-brand scrollTo m-0 px-4 py-2" id="menuDailyCurve" href="#country">Curva Diária</a>
+        </div>
+        <div class="navbar-brand">
+          <select name="lang" id="lang" class="form-control form-control-sm">
+            <option value="pt-br">Português</option>
+            <option value="eng">English</option>
+          </select>
+        </div>
+      </nav>
+      <!-- FIM NAVBAR -->
+    </header>
+      <!-- MAIN CONTAINER SUMMARY -->
+      <div class="main" id="summary"><div class="fix-nav-height"></div>
+        <div class="row m-0">
+          <!-- box summary -->
+          <div class="col-lg-5 col-md-5 col-sm-11 mx-auto text-center box">
+            <div class="container p-3">
+              <!-- Confirmeds -->
+              <h2 id="titleDashboard">DashBoard</h2>
+              <div class="mx-auto p-2 kpi-content bg-danger text-white">
+                <h4 id="txtConfirmed">Total Confirmados</h4>
+                <h5 id="nConfirmed">0</h5>
+              </div>
+              <!-- Mortos -->
+              <div class="mx-auto p-2 kpi-content bg-dark text-white">
+                <h4 id="txtDeaths">Total Mortes</h4>
+                <h5 id="nDeaths">0</h5>
+              </div>
+              <!-- Recuperados -->
+              <div class="mx-auto p-2 kpi-content bg-info text-white">
+                <h4 id="txtRecovered">Total Recuperados</h4>
+                <h5 id="nRecovered">0</h5>
+              </div>
+              <!-- Recuperados -->
+              <div class="mx-auto p-2 kpi-content bg-secondary text-white">
+                <h4 id="txtActives">Total Ativos</h4>
+                <h5 id="nActives">0</h5>
+              </div>
+            </div>
+            <div class="card-footer p-0 text-center bg-white">
+              <span class="m-0" id="txtdataupdate">Última Atualização</span>
+              <span class="m-0" id="dataupdate"></span>
+            </div>
+          </div>
+  
+          <!-- box new cases -->
+          <div class="col-lg-6 col-md-6 col-sm-11 mx-auto text-center box">
+            <div class="container p-3 mx-auto h-100">
+              <h2 id="titleNewCases">Novos Casos - Diário</h2>
+              <canvas id="newCasesPie" style="max-height: 85%;"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MAIN CONTAINER TOP-10 -->
+      <div class="main" id="top10"><div class="fix-nav-height"></div>
+        <div class="row m-0 justify-content-center">
+          <div class="col-11 box text-center p-3">
+            <div class="form-row form-inline justify-content-center">
+              <h2 id="titleTop10">Top 10 - </h2>
+              <select name="slcTop10" id="slcTop10" class="form-control ml-3">
+                <option id="opConfirmed" value="TotalConfirmed">Confirmados</option>
+                <option id="opDeaths" value="TotalDeaths" selected>Mortes</option>
+                <option id="opRecovered" value="TotalRecovered">Recuperados</option>
+              </select>
+            </div>
+            <canvas id="deathsTop10Bar" style="max-height: 85%;"></canvas>
+          </div>
+        </div>
+      </div>
+      <!-- MAIN CONTAINER NUMBERS PER COUNTRY -->
+      <div class="main" id="country"><div class="fix-nav-height"></div>
+        <div class="row m-0 justify-content-center mt-3">
+          <!-- FORM FILTER -->
+          <div class="col-lg-4 col-md-5 col-sm-11 mx-auto p-3 bg-white">
+            <div class="form-group">
+              <h5 id="txtSlcDateInterval">Selecione o período:</h5>
+              <hr>
+              <div class="form-row">
+                <div class="form-group col-6">
+                  <label for="initdate" id="txtFormFrom">De:</label>
+                  <input class="form-control" type="date" name="initdate" value="">
+                </div>
+                <div class="form-group col-6">
+                  <label for="enddate" id="txtFormTo">Até:</label>
+                  <input class="form-control" type="date" name="enddate" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="slcCountry" id="txtFormCountry">País</label>
+                <select class="form-control" name="slcCountry" id="slcCountry">
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="dataselector" id="txtFormData">Dados:</label>
+                <select class="form-control col-6" name="dataselector" id="dataselector">
+                  <option id="dataConfirmed" value="TotalConfirmed">Confirmados</option>
+                  <option id="dataDeaths" value="TotalDeaths" selected>Mortes</option>
+                  <option id="dataRecovered" value="TotalRecovered">Recuperados</option>
+                </select>
+              </div>
+              <button class="btn btn-secondary col-6" id="btnSearchDaily">Pesquisar</button>
+            </div>  
+          </div>
+          <!-- CANVAS CHART -->
+          <div class="col-lg-7 col-md-6 col-sm-11 mx-auto p-3 bg-white text-center">
+            <h4 id="titleDailyCurve">Curva Diária - Covid-19</h4>
+            <canvas id="dailyCurveCanvas"></canvas>
+          </div>
+        </div>
+      </div>
+    <footer>
+
+    </footer>
+    <!--=========================== SCRITS ===========================-->
+    <!-- BOOTSTRAP JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP JS -->
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- LODASH -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <!-- CHART JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- MY SCRIPTS -->
+    <script src="./assets/js/_elements-library.js"></script>
+    <script src="./assets/js/graphics.js"></script>
+    <script type="module" src="./assets/js/index.js"></script>
+    <script src="./assets/js/animations.js"></script>
+  </body>
+</html>

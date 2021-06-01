@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Modelo</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <h1>COVID-19 - DASHBOARD</h1>
+    <div class="slc-language">
+      <select name="op-lang" id="lang">
+        <option value="pt_br">Português-BR</option>
+        <option value="eng">English</option>
+      </select>
+    </div>
+    <div class="container wrap">
+      <section class="item">
+        <h5 id="labelconfirmeds">Total Confirmados</h5>
+        <p id="confirmed"></p>
+        <h6 id="tconfirmed"></h6>
+      </section>
+      <section class="item">
+        <h5 id="labeldeaths">Total Mortes</h5>
+        <p id="death"></p>
+        <h6 id="tdeath"></h6>
+      </section>
+      <section class="item">
+        <h5 id="labelrecovereds">Total Recuperados</h5>
+        <p id="recovered"></p>
+        <h6 id="trecovered"></h6>
+      </section>
+      <section class="item">
+        <h5 id="labelactives">Total Ativos</h5>
+        <p id="active" ></p>
+        <h6 id="tactive"></h6>
+      </section>
+    </div>
+    <div class="search">
+      <div class="divPais">
+        <label for="combo" id="labelcountry">País:</label>
+        <select class="custom-select" id="combo" name="combo">
+          <!-- <option>Global</option> -->
+        </select>
+      </div>
+      <div class="divData">
+        <label for="sdata" id="labeldata">Data:</label>
+        <input id="sdata" name="sdata" type="date" min="2020-01-01" value=""/>
+        <button id="btnSearch" type="button">Buscar</button>
+      </div>
+      <p id="span-error"> </p>
+    </div>
+    <!-- <p>&#8679;&#8613;&#8673;
+    <br>&#8681;&#8615;&#8675;</p> -->
+    <script src="./assets/js/lang.js"></script>
+    <script src="./assets/js/fetchs.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
