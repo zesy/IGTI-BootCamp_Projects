@@ -43,6 +43,16 @@ const txtFormFrom = document.getElementById("txtFormFrom");
 const txtSlcDateInterval = document.getElementById("txtSlcDateInterval");
 const txtFormData = document.getElementById("txtFormData");
 
+const initdate = document.getElementById("initdate");
+const enddate = document.getElementById("enddate");
+
+const dataTypeSelector = document.getElementById("dataTypeSelector");
+
+const lineConfirmed = document.getElementById("lineConfirmed");
+const lineDeaths = document.getElementById("lineDeaths");
+const lineRecovered = document.getElementById("lineRecovered");
+const formSearchDaily = document.getElementById("formSearchDaily");
+
 //================== LANGUAGE ELEMENTS ===================
 const lang = {
     'pt-br': {

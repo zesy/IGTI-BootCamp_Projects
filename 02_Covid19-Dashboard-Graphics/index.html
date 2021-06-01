@@ -94,17 +94,17 @@
         <div class="row m-0 justify-content-center mt-3">
           <!-- FORM FILTER -->
           <div class="col-lg-4 col-md-5 col-sm-11 mx-auto p-3 bg-white">
-            <div class="form-group">
+            <form class="form-group" id="formSearchDaily">
               <h5 id="txtSlcDateInterval">Selecione o período:</h5>
               <hr>
               <div class="form-row">
                 <div class="form-group col-6">
                   <label for="initdate" id="txtFormFrom">De:</label>
-                  <input class="form-control" type="date" name="initdate" value="">
+                  <input class="form-control" id="initdate" type="date" name="initdate" value="" required>
                 </div>
                 <div class="form-group col-6">
                   <label for="enddate" id="txtFormTo">Até:</label>
-                  <input class="form-control" type="date" name="enddate" value="">
+                  <input class="form-control" id="enddate" type="date" name="enddate" value="" required>
                 </div>
               </div>
               <div class="form-group">
@@ -112,21 +112,44 @@
                 <select class="form-control" name="slcCountry" id="slcCountry">
                 </select>
               </div>
+              <div class="form-row">
+                <button type="submit" class="btn btn-secondary col-6 ml-auto" id="btnSearchDaily">Pesquisar</button>
+              </div>
+              <hr><!--==== Select Data  -->
               <div class="form-group">
-                <label for="dataselector" id="txtFormData">Dados:</label>
-                <select class="form-control col-6" name="dataselector" id="dataselector">
-                  <option id="dataConfirmed" value="TotalConfirmed">Confirmados</option>
-                  <option id="dataDeaths" value="TotalDeaths" selected>Mortes</option>
-                  <option id="dataRecovered" value="TotalRecovered">Recuperados</option>
+                <label for="dataTypeSelector" id="txtFormData">Dados:</label>
+                <select class="form-control col-11" name="dataTypeSelector" id="dataTypeSelector" disabled>
+                  <option id="dataConfirmed" value="Confirmed" selected>Confirmados</option>
+                  <option id="dataDeaths" value="Deaths">Mortes</option>
+                  <option id="dataRecovered" value="Recovered">Recuperados</option>
                 </select>
               </div>
-              <button class="btn btn-secondary col-6" id="btnSearchDaily">Pesquisar</button>
-            </div>  
+            </form>  
           </div>
           <!-- CANVAS CHART -->
           <div class="col-lg-7 col-md-6 col-sm-11 mx-auto p-3 bg-white text-center">
             <h4 id="titleDailyCurve">Curva Diária - Covid-19</h4>
             <canvas id="dailyCurveCanvas"></canvas>
+            <div class="row justify-content-center">
+              <div class="col-3 bg-danger text-white py-0 mx-auto">
+                <div class="card-header border-light m-0 p-0">
+                  <small id="smallConfirmed">Confirmados</small>
+                </div>
+                <p class="m-0 p-0" id="lineConfirmed">000</p>
+              </div>
+              <div class="col-3 bg-dark text-white py-0 mx-auto">
+                <div class="card-header border-light m-0 p-0">
+                  <small id="smallDeaths">Mortes</small>
+                </div>
+                <p class="m-0 p-0" id="lineDeaths">000</p>
+              </div>
+              <div class="col-3 bg-info text-white py-0 mx-auto">
+                <div class="card-header border-light m-0 p-0">
+                  <small id="smallRecovered">Recuperados</small>
+                </div>
+                <p class="m-0 p-0" id="lineRecovered">000</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -144,7 +167,7 @@
     <!-- LODASH -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
     <!-- CHART JS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
     <!-- MY SCRIPTS -->
     <script src="./assets/js/_elements-library.js"></script>
     <script src="./assets/js/graphics.js"></script>

@@ -20,7 +20,7 @@
 
 ___
 
-<h3 align="center"><img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-kingdom-32.png"> This is my repository for the BooCamp from IGTI <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-states-of-america-32.png"></h3>
+<h3 align="center"><img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-kingdom-32.png"> This is my repository for the BootCamp from IGTI <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-states-of-america-32.png"></h3>
 
 ## First Project:
 #### Covid19 - DashBoard

@@ -38,6 +38,7 @@ const initSummary = async () => {
         const s = await doFetch(summaryUrl);
         loadSummary(s);
         setData(s.Global['Date'])
+        console.log("DATA SUMMARY: "+s.Global['Date']);
     } catch (error) {
         showError(error);
     }
@@ -102,18 +103,20 @@ document.getElementById("btnSearch").addEventListener("click", () => {updateInfo
 // GET DATE AND TRANSFORM TO ISODATE =================================
 const doDateParam = (theDate) => {
     let fromDate = new Date(theDate);
-    fromDate.setDate(fromDate.getDate() - 2);
+    fromDate = new Date(fromDate.setDate(fromDate.getDate() - 2));
 
-    let fromDay = (fromDate.getDate()).toString().padStart(2, '0');
-    let fromMonth = (fromDate.getMonth()+1).toString().padStart(2, '0');
-    let fromYear = fromDate.getFullYear();
+    // let fromDay = (fromDate.getDate()).toString().padStart(2, '0');
+    // let fromMonth = (fromDate.getMonth()+1).toString().padStart(2, '0');
+    // let fromYear = fromDate.getFullYear();
 
     let toDate = new Date(theDate);
-    let toDay = (toDate.getDate()).toString().padStart(2, '0');
-    let toMonth = (toDate.getMonth()+1).toString().padStart(2, '0');
-    let toYear = toDate.getFullYear();
-
-    return `?from=${fromYear}-${fromMonth}-${fromDay}T00:00:00Z&to=${toYear}-${toMonth}-${toDay}T23:59:59Z`;
+    // let toDay = (toDate.getDate()).toString().padStart(2, '0');
+    // let toMonth = (toDate.getMonth()+1).toString().padStart(2, '0');
+    // let toYear = toDate.getFullYear();
+    // console.log(fromDate.toISOString());
+    // console.log(toDate.toISOString());
+    // return `?from=${fromYear}-${fromMonth}-${fromDay}T00:00:00Z&to=${toYear}-${toMonth}-${toDay}T23:59:59Z`;
+    return `?from=${fromDate.toISOString()}&to=${toDate.toISOString()}`;
     
 };
 // END DATE ================================================================

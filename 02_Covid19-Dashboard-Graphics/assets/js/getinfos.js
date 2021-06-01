@@ -15,7 +15,14 @@ async function getSummary(){
 }
 
 async function getCountryInfo(country, datafrom, datato){
-    let infos = await getCovidApi(`/total/contry/${country}?from=${datafrom}&to=${datato}`);
+    let infos = await getCovidApi(`/total/country/${country}?from=${datafrom}&to=${datato}`)
+                .then((data) => {
+                    return data.data;
+                })
+                .catch((err)=>{
+                    throw err;
+                });
+
     return infos;
 }
 

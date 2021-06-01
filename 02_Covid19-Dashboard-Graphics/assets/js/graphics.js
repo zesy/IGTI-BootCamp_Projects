@@ -6,13 +6,20 @@ const colorDanger = '#d9534f';
 const colorDark = '#292b2c';
 const colorLight = '#f7f7f7';
 
-function updateChartDatas(chart, infos = false, labels = false){
+function updateChartDatas(chart, infos = false, labels = false, datasetlabels = false, average = false){
+    if(infos)
+        chart.data.datasets.forEach((dataset) => {dataset.data = infos});
+    
     if(labels)
         chart.data.labels = labels;
 
-    if(infos)
-        chart.data.datasets.forEach((dataset) => {dataset.data = infos;});
+    if(datasetlabels)
+        chart.data.datasets.forEach((dataset, index) => {dataset.label = datasetlabels[index]});
 
+    if(average){
+        chart.data.datasets[1].data = [];
+        infos.forEach((info) => {chart.data.datasets[1].data.push(average)});
+    }
     chart.update();
 }
 
@@ -68,12 +75,21 @@ const deathsTop10Bar = new Chart(canvasBar, deathsTop10BarData);
 const dailyCurveData = {
     type: 'line',
     data: {
-        labels: ['0'],
-        datasets: [{
-            label: '',
-            data: [1],
-            backgroundColor: '#A5435C'
-        }]
+        labels: [],
+        datasets: [
+            {
+                label: '',
+                data: [],
+                backgroundColor: '#A5435C',
+                borderColor: '#a5435c'
+            },
+            {
+                label: '',
+                data: [],
+                backgroundColor: colorPrimary,
+                borderColor: colorPrimary
+            }
+        ]
     },
     options: {
         responsive: true,
