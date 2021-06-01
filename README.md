@@ -28,7 +28,7 @@ ___
 - Country and Date Filters
     - Increase or Decrease arrow indicator for cases on selected date
 
-## First Chalenge:
+## First Challenge:
 #### Covid19 - DashBoard and Graphics
 - Total Cases (Confirmed, Deaths, Recovered and Actives)
 - Pie Graphic - New daily cases distribution

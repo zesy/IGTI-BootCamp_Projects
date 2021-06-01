@@ -1,5 +1,5 @@
 # Wazzzzuuppp! :smile:
-### This is the first chalenge from IGIT BootCamp
+### This is the first challenge from IGIT BootCamp
 
 #
 ## Covid19 DashBoard - Status Graphics :part_alternation_mark:
