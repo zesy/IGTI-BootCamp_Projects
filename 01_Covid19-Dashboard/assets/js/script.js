@@ -73,7 +73,6 @@ const setDailyInfos = (tconfirmed, tdeath, trecovered, tactive) => {
 
 //SET INITIAL SUMMARY DATE ON DATE FIELD
 const setData = (dt) => {
-    //console.log(dt);
     const ndata = new Date(dt);
     const dia = (ndata.getDate()).toString().padStart(2, '0');
     const mes = (ndata.getMonth()+1).toString().padStart(2, '0');
@@ -115,7 +114,6 @@ const doDateParam = (theDate) => {
 const initSearch = async (scountry, sdate) => {
     try {
         const jsonCountry = await doFetch(countryUrl+'/'+scountry+doDateParam(sdate));
-        //console.log(jsonCountry);
         loadCountryInfos(jsonCountry);
     } catch (error) {
         showError(error);
@@ -125,7 +123,6 @@ const initSearch = async (scountry, sdate) => {
 //LOAD INFO ON FIELDS
 const loadCountryInfos = (info) => {
     clearError('');
-    //confirmed, death, recovered, active, tconfirmed, tdeath, trecovered, tactive
     if (info.length > 3){
         setInfos(0,0,0,0);
         setDailyInfos('', '', '', '');

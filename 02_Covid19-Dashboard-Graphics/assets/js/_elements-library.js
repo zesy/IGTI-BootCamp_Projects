@@ -53,6 +53,10 @@ const lineDeaths = document.getElementById("lineDeaths");
 const lineRecovered = document.getElementById("lineRecovered");
 const formSearchDaily = document.getElementById("formSearchDaily");
 
+const smallConfirmed = document.getElementById("smallConfirmed");
+const smallDeaths = document.getElementById("smallDeaths");
+const smallRecovered = document.getElementById("smallRecovered");
+
 //================== LANGUAGE ELEMENTS ===================
 const lang = {
     'pt-br': {
