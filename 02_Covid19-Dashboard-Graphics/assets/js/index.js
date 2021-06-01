@@ -124,7 +124,6 @@ async function searchByCountry(evt){
     let datetoiso = new Date(getSelectedDateTo());
     datetoiso = datetoiso.setHours(datetoiso.getHours() + 23, datetoiso.getMinutes() + 59);
     datetoiso = new Date(datetoiso).toISOString();
-    console.log(datetoiso);
     countryInfo = await getCountryInfo(getSelectedCountry(), datefromiso, datetoiso);
 
     dataTypeSelector.removeAttribute("disabled");
