@@ -4,8 +4,8 @@ const getCovidApi = axios.create({
 
 async function getSummary(){
     let summary = await getCovidApi.get('/summary')
-                .then((data) => {
-                    return data.data;
+                .then((resp) => {
+                    return resp.data;
                 })
                 .catch((err)=>{
                     throw err;
@@ -16,8 +16,8 @@ async function getSummary(){
 
 async function getCountryInfo(country, datafrom, datato){
     let infos = await getCovidApi(`/total/country/${country}?from=${datafrom}&to=${datato}`)
-                .then((data) => {
-                    return data.data;
+                .then((resp) => {
+                    return resp.data;
                 })
                 .catch((err)=>{
                     throw err;
