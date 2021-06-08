@@ -2,7 +2,8 @@
 
 <h3 align="center"> <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/brazil-flag-32.png"> Este é meu repositório para o BootCamp do IGTI <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/brazil-flag-32.png"></h3>
 
-<h1></h1> 
+<br>
+ 
 ## Módulo 1 - JavaScript
 ### Projeto: Covid19 - DashBoard
 - Total de Casos (Confirmados, Mortes, Recuperados e Ativos)
