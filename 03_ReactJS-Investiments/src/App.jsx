@@ -1,9 +1,10 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Investment from "./components/Investment";
 import { dataInvests } from "./data/dataInvests";
 
 export default function App() {
-  const VERSION = "1.0";
+  const VERSION = "1.1";
   const investments = dataInvests.investments;
   const reports = dataInvests.reports;
 
@@ -20,6 +21,10 @@ export default function App() {
           return <Investment key={inv.id} descr={inv.description}>{invReports}</Investment>;
         })}
       </main>
+
+      <footer>
+        <Footer atvType="Atividade" module="2" moduleName="React I" date="jun/2021"/>
+      </footer>
     </>
   );
 }

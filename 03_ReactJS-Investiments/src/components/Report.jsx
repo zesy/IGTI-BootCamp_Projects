@@ -7,10 +7,13 @@ export default function Report({children: report}) {
     const strPercent = percent > 0 ? "+"+percent : percent;
 
     const txtColor = (percent > 0 ? "text-green-400" : percent < 0 ? "text-red-400" : "");
+    
+    const hoverBgColor = (percent > 0 ? "hover:bg-green-100" : percent < 0 ? "hover:bg-red-100" : "hover:bg-gray-100");
     const months = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
+
     
     return (
-        <div className="flex flex-row border-b border-gray-300 items-center">
+        <div className={`flex flex-row border-b border-gray-300 items-center ${hoverBgColor}`}>
             <p className="mr-5 text-sm font-mono">{months[month-1]}/{year}</p>
             <p className={txtColor}>R$ {value}</p>
             <p className={"ml-auto text-sm font-semibold "+txtColor}>{strPercent}%</p>
