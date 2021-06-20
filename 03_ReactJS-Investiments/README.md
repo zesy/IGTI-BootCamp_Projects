@@ -13,12 +13,33 @@
 - Porcentagem do Rendimento do mês.
 - Rendimento total do fundo e sua porcentagem.
 
+### Como Iniciar
+
+#### Instalar dependências:
+
+> yarn
+
+#### Iniciar Projeto
+
+> yarn dev
+
 ## <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-kingdom-32.png"><img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-states-of-america-32.png"> Project Module 2 - React I
 
 ### Fund Income Evolution
+
 > Used a pre-generated DataSet by Teacher.
 
 - Render the Funds and your monthly Incomes;
 - Total Income per month
 - Income percentage of month
 - Total Fund Income and your percentage
+
+### How to Run
+
+#### Install Dependence:
+
+> yarn
+
+#### Init Project
+
+> yarn dev

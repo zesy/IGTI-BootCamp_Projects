@@ -20,6 +20,20 @@
   - [Axios](https://github.com/axios/axios) (Http requests)
   - [Json-Server](https://www.npmjs.com/package/json-server) (Simular backend)
 
+### Como Iniciar
+
+#### Instalar dependências:
+
+> yarn
+
+#### Iniciar Projeto
+
+> yarn dev
+
+#### Iniciar Servidor Backend
+
+> yarn init-server
+
 #
 
 ## <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-kingdom-32.png"><img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-states-of-america-32.png"> Challenge Module 2 - React I
@@ -41,6 +55,20 @@
 - Practice others tools:
   - [Axios](https://github.com/axios/axios) (Http requests)
   - [Json-Server](https://www.npmjs.com/package/json-server) (Backend Simulator)
+
+### How to Run
+
+#### Install Dependences:
+
+> yarn
+
+#### Init Project
+
+> yarn dev
+
+#### Init Backend Server
+
+> yarn init-server
 
 #
 
