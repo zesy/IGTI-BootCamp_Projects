@@ -1,0 +1,23 @@
+Despesa,Categoria,Preço,Frequency
+Conta de luz,Moradia,200,12
+Conta de água,Moradia,150,12
+Aluguel,Moradia,1600,12
+Padaria,Alimentação,30,60
+Supermercado,Alimentação,300,30
+Compra no IFood,Alimentação,60,20
+Gasolina,Transporte,100,40
+Presente para mãe,Outros,200,2
+Revisão do carro,Transporte,1500,1
+Seguro,Transporte,600,5
+Viagem para praia,Lazer,3000,1
+Restaurante,Alimentação,80,60
+Salão de beleza,Outros,40,5
+Compra no shopping,Lazer,280,10
+Conta do buteco,Lazer,75,24
+Churrasco,Lazer,100,10
+Cinema,Lazer,60,10
+Clube,Lazer,100,10
+Academia,Saúde,90,12
+Consulta médica,Saúde,200,10
+Farmácia,Saúde,120,10
+Reforma,Moradia,3200,1
