@@ -1,4 +1,4 @@
-import "../assets/styles/footer.scss";
+import "./footer.scss";
 
 type FooterProps = {
   isChallenge: boolean;
@@ -20,14 +20,8 @@ export default function Footer(props: FooterProps) {
           />
           /zesy
         </a>
-        <a
-          href="https://www.linkedin.com/in/wesley-andrade1994/"
-          className="flex-row all-center"
-        >
-          <img
-            src="https://raw.githubusercontent.com/zesy/zesy/main/_some-imgs/In-White-34px.png"
-            alt="linkedin"
-          />
+        <a href="https://www.linkedin.com/in/wesley-andrade1994/" className="flex-row all-center">
+          <img src="https://raw.githubusercontent.com/zesy/zesy/main/_some-imgs/In-White-34px.png" alt="linkedin" />
           /wesley
         </a>
       </div>
@@ -41,10 +35,7 @@ export default function Footer(props: FooterProps) {
           <div className="flex-col all-center border-right">
             <p className="font-semibold">BootCamp</p>
             <a href="https://www.igti.com.br" target="_blank" rel="noreferrer">
-              <img
-                src="https://raw.githubusercontent.com/zesy/zesy/main/_some-imgs/igti-logo.png"
-                alt="github"
-              />
+              <img src="https://raw.githubusercontent.com/zesy/zesy/main/_some-imgs/igti-logo.png" alt="github" />
             </a>
           </div>
 

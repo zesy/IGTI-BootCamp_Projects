@@ -6,7 +6,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import { IExpense } from "./interfaces/interfaces";
 
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import ExpenseTable from "./components/ExpenseTable";
 
 import "./assets/styles/main.scss";
@@ -38,7 +38,9 @@ function App() {
         const theDate: string = `${selectedYear}-${selectedMonth?.toString().padStart(2, "0")}`;
         const theExpenses: IExpense[] = await getExpenses(theDate);
         let total: number = 0;
-        theExpenses.map((item) => (total = total + item.valor));
+        for (const expense of theExpenses) {
+          total += expense.valor;
+        }
         setExpenses(theExpenses);
         setTotalExpense(total);
       } catch (error) {
