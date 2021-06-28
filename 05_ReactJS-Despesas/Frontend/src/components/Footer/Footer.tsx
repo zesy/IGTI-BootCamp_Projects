@@ -10,18 +10,20 @@ type FooterProps = {
 export default function Footer(props: FooterProps) {
   const atvType = props.isChallenge ? "Desafio" : "Atividade";
 
+  const URL_GIT_USER = "https://github.com/zesy";
+  const URL_GIT_LOGO = "https://raw.githubusercontent.com/zesy/zesy/main/_some-imgs/GitHub-Mark-Light-32px.png";
+  const URL_IN_USER = "https://www.linkedin.com/in/wesley-andrade1994/";
+  const URL_IN_LOGO = "https://raw.githubusercontent.com/zesy/zesy/main/_some-imgs/In-White-34px.png";
+
   return (
     <div id="div-footer" className="flex-column all-center">
       <div className="flex-row all-center space-x pb border-bottom">
-        <a href="https://github.com/zesy" className="flex-row all-center">
-          <img
-            src="https://raw.githubusercontent.com/zesy/zesy/main/_some-imgs/GitHub-Mark-Light-32px.png"
-            alt="github"
-          />
+        <a href={URL_GIT_USER} className="flex-row all-center">
+          <img src={URL_GIT_LOGO} alt="github" />
           /zesy
         </a>
-        <a href="https://www.linkedin.com/in/wesley-andrade1994/" className="flex-row all-center">
-          <img src="https://raw.githubusercontent.com/zesy/zesy/main/_some-imgs/In-White-34px.png" alt="linkedin" />
+        <a href={URL_IN_USER} className="flex-row all-center">
+          <img src={URL_IN_LOGO} alt="linkedin" />
           /wesley
         </a>
       </div>
