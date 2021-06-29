@@ -22,15 +22,23 @@
 
 ### Como Iniciar
 
-#### Instalar dependências:
+#### Diretório > './Frondend':
+
+##### Instalar dependências FrontEnd:
 
 > yarn
 
-#### Iniciar Projeto
+##### Iniciar Projeto
 
 > yarn dev
 
-#### Iniciar Servidor Backend
+#### Diretório > './Backend':
+
+##### Instalar dependências BackEnd:
+
+> yarn
+
+##### Iniciar Servidor Backend
 
 > yarn init-server
 
@@ -38,7 +46,7 @@
 
 ## <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-kingdom-32.png"><img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-states-of-america-32.png"> Challenge Module 2 - React I
 
-### "Super" Eleições | React-Elections
+### "Super" Elections | React-Elections
 
 > Used a pre-generated DataSet by Teacher.
 
@@ -58,15 +66,23 @@
 
 ### How to Run
 
-#### Install Dependences:
+#### Dir > './Frondend':
+
+##### Install dependences:
 
 > yarn
 
-#### Init Project
+##### Init Project
 
 > yarn dev
 
-#### Init Backend Server
+#### Dir > './Backend':
+
+##### Installl dependences:
+
+> yarn
+
+##### Init Backend Server
 
 > yarn init-server
 
