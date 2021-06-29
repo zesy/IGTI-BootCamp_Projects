@@ -8,7 +8,6 @@
 
 - TypeScript
 - Material-UI
-- React-Router
 - Também...
   - [Axios](https://github.com/axios/axios) (Http requests)
   - [Json-Server](https://www.npmjs.com/package/json-server) (Simular backend)
@@ -54,7 +53,6 @@
 
 - TypeScript
 - Material-UI
-- React-Router
 - Too...
   - [Axios](https://github.com/axios/axios) (Http requests)
   - [Json-Server](https://www.npmjs.com/package/json-server) (Backend simulator)
