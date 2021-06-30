@@ -7,7 +7,8 @@
 #### Utilização:
 
 - TypeScript
-- Material-UI
+- Material-UI - [Link](https://material-ui.com/)
+- Node-SASS - [Link](https://github.com/sass/node-sass)
 - Também...
   - [Axios](https://github.com/axios/axios) (Http requests)
   - [Json-Server](https://www.npmjs.com/package/json-server) (Simular backend)
@@ -45,14 +46,15 @@
 
 ## <br>
 
-## <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-kingdom-32.png"><img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-states-of-america-32.png"> Challenge Module 2 - React I
+## <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-kingdom-32.png"><img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-states-of-america-32.png"> Homework Module 3 - React I
 
 ## Expenses List | React-Expenses
 
 #### Using:
 
 - TypeScript
-- Material-UI
+- Material-UI - [Link](https://material-ui.com/)
+- Node-SASS - [Link](https://github.com/sass/node-sass)
 - Too...
   - [Axios](https://github.com/axios/axios) (Http requests)
   - [Json-Server](https://www.npmjs.com/package/json-server) (Backend simulator)
