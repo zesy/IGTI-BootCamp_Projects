@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { IAllExpenses, ICategories, IExpense } from "../interfaces/interfaces";
-import { getExpenses } from "../services/HttpService";
+import { apiGetExpenses } from "../services/HttpService";
 
 export function useAllExpenses(year: string, month: string): IAllExpenses {
   const [allExpenses, setExpenses] = useState<IExpense[]>();
@@ -10,7 +10,7 @@ export function useAllExpenses(year: string, month: string): IAllExpenses {
     async function getTheExpenses() {
       try {
         const theDate: string = `${year}-${month.toString().padStart(2, "0")}`;
-        const theExpenses: IExpense[] = await getExpenses(theDate);
+        const theExpenses: IExpense[] = await apiGetExpenses(theDate);
         let total: number = 0;
         for (const expense of theExpenses) {
           total += expense.valor;
@@ -20,6 +20,7 @@ export function useAllExpenses(year: string, month: string): IAllExpenses {
         setTotalExpense(total);
       } catch (error) {
         console.log(error.message);
+        throw new Error(error);
       }
     }
     getTheExpenses();
@@ -37,9 +38,9 @@ export function useAllExpenses(year: string, month: string): IAllExpenses {
     }
 
     if (newCat) total.push({ categoria: current.categoria, total: current.valor });
+
     return total;
   }, [] as ICategories[]);
-  console.log(totalCategories);
 
   return {
     allExpenses,

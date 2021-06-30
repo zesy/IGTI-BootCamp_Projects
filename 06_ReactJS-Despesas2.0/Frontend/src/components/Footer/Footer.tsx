@@ -1,3 +1,4 @@
+import React from "react";
 import "./footer.scss";
 
 type FooterProps = {
@@ -7,7 +8,7 @@ type FooterProps = {
   date: string;
 };
 
-export default function Footer(props: FooterProps) {
+export const Footer = React.memo((props: FooterProps) => {
   const atvType = props.isChallenge ? "Desafio" : "Atividade";
 
   const URL_GIT_USER = "https://github.com/zesy";
@@ -54,4 +55,4 @@ export default function Footer(props: FooterProps) {
       </div>
     </div>
   );
-}
+});

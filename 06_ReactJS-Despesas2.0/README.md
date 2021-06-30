@@ -16,6 +16,7 @@
   - Hooks Personalizados
   - useCallback
   - useMemo
+  - React.memo
 - Também...
   - Fetch (http request)
   - [Json-Server](https://www.npmjs.com/package/json-server) (Simular backend)
@@ -75,6 +76,7 @@
   - Personalized Hooks
   - useCallback
   - useMemo
+  - React.memo
 - Too..
   - Fetch (http request)
   - [Json-Server](https://www.npmjs.com/package/json-server) (Backend simulator)

@@ -1,26 +1,12 @@
-import { ReactElement } from "react";
-
+import React, { useMemo } from "react";
+import { generateCategoriesTable } from "../Helpers/generateCategoriesTable";
 import { CategoriesTableProps } from "../interfaces/interfaces";
 
-export default function CategoriesTableTable(props: CategoriesTableProps) {
+export const CategoriesTable = React.memo((props: CategoriesTableProps) => {
   //
-  let theCells: ReactElement[];
-  if (props.categories && props.categories.length >= 1) {
-    theCells = props.categories.map((item, i) => {
-      return (
-        <tr key={i}>
-          <td align="left">{item.categoria}</td>
-          <td align="right">R$ {item.total?.toFixed(2)}</td>
-        </tr>
-      );
-    });
-  } else {
-    theCells = [
-      <tr key={-1}>
-        <td align="left">Não há dados</td>
-      </tr>,
-    ];
-  }
+  const tableCells = useMemo(() => {
+    return generateCategoriesTable(props.categories);
+  }, [props.categories]);
 
   return (
     <div className="mt-32">
@@ -31,8 +17,8 @@ export default function CategoriesTableTable(props: CategoriesTableProps) {
             <td align="right">Valor&nbsp;(R$)</td>
           </tr>
         </thead>
-        <tbody>{theCells}</tbody>
+        <tbody>{tableCells}</tbody>
       </table>
     </div>
   );
-}
+});

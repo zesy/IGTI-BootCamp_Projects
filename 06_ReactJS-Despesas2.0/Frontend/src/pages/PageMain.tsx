@@ -2,10 +2,11 @@ import { ChangeEvent, useState } from "react";
 
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+
 import { useAllExpenses } from "../Hooks/useAllExpenses";
 
-import ExpenseTable from "../components/ExpenseTable";
-import CategoriesTable from "../components/CategoriesTable";
+import { ExpenseTable } from "../components/ExpenseTable";
+import { CategoriesTable } from "../components/CategoriesTable";
 
 import "../assets/styles/main.scss";
 

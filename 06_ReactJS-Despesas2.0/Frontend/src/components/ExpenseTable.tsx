@@ -1,28 +1,12 @@
-import { ReactElement } from "react";
-
+import React, { useMemo } from "react";
+import { generateExpensesTable } from "../Helpers/generateExpensesTable";
 import { ExpenseTableProps } from "../interfaces/interfaces";
 
-export default function ExpenseTable(props: ExpenseTableProps) {
+export const ExpenseTable = React.memo((props: ExpenseTableProps) => {
   //
-  let theCells: ReactElement[];
-  if (props.expenses && props.expenses.length >= 1) {
-    theCells = props.expenses.map((item, i) => {
-      return (
-        <tr key={i}>
-          <td align="left">{item.descricao}</td>
-          <td align="left">{item.categoria}</td>
-          <td align="center">{item.dia}</td>
-          <td align="right">R$ {item.valor}</td>
-        </tr>
-      );
-    });
-  } else {
-    theCells = [
-      <tr key={-1}>
-        <td align="left">Não há dados</td>
-      </tr>,
-    ];
-  }
+  const tableCells = useMemo(() => {
+    return generateExpensesTable(props.expenses);
+  }, [props.expenses]);
 
   return (
     <div className="mt-32">
@@ -35,8 +19,8 @@ export default function ExpenseTable(props: ExpenseTableProps) {
             <td align="right">Valor&nbsp;(R$)</td>
           </tr>
         </thead>
-        <tbody>{theCells}</tbody>
+        <tbody>{tableCells}</tbody>
       </table>
     </div>
   );
-}
+});

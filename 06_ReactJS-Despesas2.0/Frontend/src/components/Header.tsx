@@ -1,25 +1,32 @@
-import "../assets/styles/main.scss";
+import React, { useCallback } from "react";
+import { apiDoLogout } from "../services/HttpService";
 import { IUser } from "../interfaces/interfaces";
-import { doLogout } from "../services/HttpService";
+import "../assets/styles/main.scss";
 
 interface HeaderProps {
   user: IUser;
   onLogout: () => void;
 }
-export default function Header(props: HeaderProps) {
-  function logout() {
-    props.onLogout();
-    doLogout();
-  }
+export const Header = React.memo((props: HeaderProps) => {
+  const { user, onLogout } = props;
+
+  const logout = useCallback(() => {
+    onLogout();
+    apiDoLogout();
+  }, [onLogout]);
+
   return (
     <div className="flex space-between b-bottom">
       <h1>Despesas</h1>
-      <div className="flex all-center">
-        <p>User: {props.user.nome}</p>
+      <div className="flex all-center gap32">
+        <p>
+          <strong className="txt-gray">User: </strong>
+          {user.nome}
+        </p>
         <button className="btn-logout" onClick={logout}>
           Sair
         </button>
       </div>
     </div>
   );
-}
+});

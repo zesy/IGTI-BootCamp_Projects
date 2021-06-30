@@ -2,7 +2,7 @@ import { FormEvent } from "react";
 import { useState } from "react";
 import "../assets/styles/main.scss";
 import { IUser } from "../interfaces/interfaces";
-import { doLogin } from "../services/HttpService";
+import { apiDoLogin } from "../services/HttpService";
 
 interface PageLoginProps {
   onLogin: (user: IUser) => void;
@@ -16,7 +16,7 @@ export default function PageLogin(props: PageLoginProps) {
 
   function handleSubmit(evt: FormEvent) {
     evt.preventDefault();
-    doLogin(email, pass).then(
+    apiDoLogin(email, pass).then(
       (user) => {
         props.onLogin(user);
       },
@@ -34,7 +34,7 @@ export default function PageLogin(props: PageLoginProps) {
       <div className="flex all-center">
         <form onSubmit={handleSubmit}>
           <div className="col form">
-            <label htmlFor="input-user">E-mail</label>
+            <label htmlFor="input-user">E-mail:</label>
             <input
               type="text"
               name="input-user"
@@ -46,7 +46,7 @@ export default function PageLogin(props: PageLoginProps) {
             />
           </div>
           <div className="col form">
-            <label htmlFor="input-pass">Senha</label>
+            <label htmlFor="input-pass">Senha:</label>
             <input
               type="password"
               name="input-pass"

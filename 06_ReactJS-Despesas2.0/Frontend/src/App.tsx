@@ -1,10 +1,10 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer/Footer";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer/Footer";
 import PageMain from "./pages/PageMain";
 import PageLogin from "./pages/PageLogin";
 
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import { getLoggedUser } from "./services/HttpService";
+import { apiGetLoggedUser } from "./services/HttpService";
 import { useEffect, useState } from "react";
 import { IUser } from "./interfaces/interfaces";
 
@@ -12,7 +12,7 @@ function App() {
   const [logged, setLogged] = useState<IUser | null>(null);
 
   useEffect(() => {
-    getLoggedUser().then(setLogged, onLogout);
+    apiGetLoggedUser().then(setLogged, onLogout);
   }, []);
 
   function onLogin(user: IUser) {
