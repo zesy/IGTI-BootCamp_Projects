@@ -1,0 +1,163 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  margin: 0;
+  padding-inline: 5px;
+  padding-block: 0;
+
+  .input {
+    width: 150px;
+    margin-right: 12px;
+  }
+}
+
+.txt-gray {
+  color: gray;
+}
+.txt-black {
+  color: black;
+}
+.mr {
+  margin-right: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.col {
+  display: block;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.all-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.all-center > * {
+  justify-content: center;
+  align-items: center;
+}
+
+.gap32 {
+  gap: 32px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.no-space-x {
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-right: 0;
+}
+
+.btn-login {
+  padding: 8px 16px;
+  border: 1px solid royalblue;
+  background-color: royalblue;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  filter: brightness(90%);
+}
+.btn-login:active {
+  filter: brightness(80%);
+}
+
+.btn-logout {
+  padding: 8px 16px;
+  border: 1px solid gray;
+  background-color: gray;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-logout:hover {
+  filter: brightness(110%);
+}
+.btn-logout:hover {
+  filter: brightness(120%);
+}
+
+.form {
+  font-family: "Roboto", sans-serif;
+  margin-top: 8px;
+  > label {
+    margin-right: 8px;
+  }
+  > input {
+    padding: 4px 8px;
+    border: 0;
+    border-radius: 3px;
+    border-bottom: 1px solid gray;
+    transition: 0.3s;
+  }
+  > input:focus,
+  input:active {
+    outline: none;
+    border-bottom: 1px solid darkblue;
+    filter: brightness(97%);
+  }
+}
+
+.erroLogin {
+  margin-top: 16px;
+  padding: 8px 16px;
+  background-color: tomato;
+}
+
+table {
+  width: 100%;
+  tr {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+  }
+  td {
+    flex: 1;
+  }
+
+  thead {
+    font-weight: 700;
+    tr {
+      margin-bottom: 16px;
+    }
+  }
+
+  tbody > tr {
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    padding: 8px 0;
+  }
+  tbody > tr:hover {
+    filter: brightness(90%);
+  }
+}
+
+select {
+  margin-left: 8px;
+  padding: 4px 8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12pt;
+  border: 1px solid lightgray;
+}
+
+.b-bottom {
+  border-bottom: 1px solid lightgray;
+}

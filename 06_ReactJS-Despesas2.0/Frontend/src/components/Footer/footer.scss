@@ -1,0 +1,65 @@
+$text-color: white;
+$bg-color: rgba(31, 41, 55, 1);
+
+#div-footer {
+  color: $text-color;
+  padding: 1rem;
+  margin-top: 2.5rem;
+  background-color: $bg-color;
+  font-family: "Roboto", sans-serif;
+
+  p {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .all-center {
+    justify-content: center;
+    align-items: center;
+  }
+  .space-x > :nth-child(n) {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .font-semibold {
+    font-weight: 600;
+  }
+
+  .more-info {
+    margin-top: 16px;
+  }
+
+  .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  .pb {
+    padding-bottom: 1rem;
+  }
+
+  .border-right {
+    border-right: 1px solid white;
+  }
+  .border-bottom {
+    border-bottom: 1px solid gray;
+  }
+  .mb-1 {
+    margin-bottom: 1.2rem;
+  }
+}
