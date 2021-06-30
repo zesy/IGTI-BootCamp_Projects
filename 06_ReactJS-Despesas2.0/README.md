@@ -1,5 +1,7 @@
 <h1 align="center"> WAAAAAAAZZZZUUUUUUUPPPP :smile: </h1>
 
+---
+
 ## <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/brazil-flag-32.png"><img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/brazil-flag-32.png"> Desafio Módulo 3 - React II
 
 ## Lista de Despesas 2.0 | React-Expenses2.0
@@ -57,11 +59,11 @@
 
 ---
 
-## <br>
+<br>
 
 ## <img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-kingdom-32.png"><img src="https://raw.githubusercontent.com/zesy/zesy/main/_flags.ico/united-states-of-america-32.png"> Challenge Module 3 - React I
 
-## Expenses List 2.0| React-Expenses2.0
+## Expenses List 2.0 | React-Expenses2.0
 
 #### Using:
 
